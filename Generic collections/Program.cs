@@ -50,6 +50,10 @@ namespace Generic_collections
 
             // Show Orders
             Console.WriteLine($"{lines}");
+            resturant.ShowOrders();
+
+            // Show Order Count
+            Console.WriteLine(lines);
             resturant.ShowOrderCount();
 
             // Show Next Order
@@ -57,8 +61,9 @@ namespace Generic_collections
             resturant.ShowNextOrder();
 
             // Show HandleOrder
-            Console.WriteLine($"{lines}\n");
             resturant.HandleOrder();
+
+
         }
     }
 }
