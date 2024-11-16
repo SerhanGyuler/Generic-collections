@@ -10,9 +10,9 @@ namespace Generic_collections
     {
         // In this class, we use private fields instead.
         static int orderIdCounter = 1;
-        private int _orderId;
+        public int _orderId;
         private List<MenuItem> _orderItems;
-        private int _tableNumber;
+        public int _tableNumber;
 
         public Order(List<MenuItem> orderItems, int tableNumber)
         {
@@ -24,3 +24,4 @@ namespace Generic_collections
         }
     }
 }
+
