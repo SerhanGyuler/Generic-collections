@@ -15,7 +15,7 @@ namespace Generic_collections
         public void AddtoMenu(MenuItem menuItem)
         {
             _menu.Add(menuItem);
-            Console.WriteLine($"Dish {menuItem.Name} added to the menu.");
+            Console.WriteLine($"{menuItem.Name} dish added to the menu.");
         }
 
         // ShowMenu Method
@@ -35,10 +35,10 @@ namespace Generic_collections
         }
 
         // HandleOrder Method
-        public void HandleOrder(Order order)
+        public void HandleOrder()
         {
-            _orderQueue.Dequeue();
-            Console.WriteLine($"Order {order._orderId} handled for table {order._tableNumber}");
+            var handledOrder = _orderQueue.Dequeue();
+            Console.WriteLine($"Order {handledOrder._orderId} handled for table {handledOrder._tableNumber}");
         }
 
         public void ShowOrders()
@@ -57,7 +57,7 @@ namespace Generic_collections
 
         public void ShowOrderCount()
         {
-            Console.WriteLine($"There are {_orderQueue.Count} orders in the queue");
+            Console.WriteLine($"There are {_orderQueue.Count} orders in the queue\n");
         }
     }
 
