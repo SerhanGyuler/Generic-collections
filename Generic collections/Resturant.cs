@@ -23,7 +23,7 @@ namespace Generic_collections
         {
             foreach(var item in _menu)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item);
             }
         }
 
@@ -39,6 +39,25 @@ namespace Generic_collections
         {
             _orderQueue.Dequeue();
             Console.WriteLine($"Order {order._orderId} handled for table {order._tableNumber}");
+        }
+
+        public void ShowOrders()
+        {
+            foreach (var item in _orderQueue)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public void ShowNextOrder()
+        {
+            var nextOrder = _orderQueue.Peek();
+            Console.WriteLine(nextOrder);
+        }
+
+        public void ShowOrderCount()
+        {
+            Console.WriteLine($"There are {_orderQueue.Count} orders in the queue");
         }
     }
 
