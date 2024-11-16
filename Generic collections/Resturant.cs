@@ -31,7 +31,7 @@ namespace Generic_collections
         public void CreateOrder(Order order)
         {
             _orderQueue.Enqueue(order);
-            Console.WriteLine($"New order placed for table {order._tableNumber}.");
+            Console.WriteLine($"Order number {order._orderId} placed for table number {order._tableNumber}.");
         }
 
         // HandleOrder Method
@@ -57,7 +57,15 @@ namespace Generic_collections
 
         public void ShowOrderCount()
         {
-            Console.WriteLine($"There are {_orderQueue.Count} orders in the queue\n");
+            if (_orderQueue.Count > 0)
+            {
+                Console.WriteLine($"There are {_orderQueue.Count} orders in the queue\n");
+            }
+            else
+            {
+                Console.WriteLine("There are no more orders in queue atm");
+            }
+
         }
     }
 

@@ -63,7 +63,39 @@ namespace Generic_collections
             // Show HandleOrder
             resturant.HandleOrder();
 
+            // Show Order Count
+            Console.WriteLine();
+            resturant.ShowOrderCount();
+            Console.WriteLine(lines);
 
+            // Order 4 + Show Confirmation
+            Order order4 = new Order(new List<MenuItem>(), 16);
+            order4.AddDish(new MenuItem(1, "Pizza", 99.90m));
+            order4.AddDish(new MenuItem(4, "Tacos", 79.90m));
+            resturant.CreateOrder(order4);
+
+            // Show Order Count
+            Console.WriteLine( );
+            resturant.ShowOrderCount();
+
+            // Show HandleOrder 2x
+            resturant.HandleOrder();
+            resturant.HandleOrder();
+
+            // Show Order Count
+            Console.WriteLine();
+            resturant.ShowOrderCount();
+
+            // Show Next Order
+            Console.WriteLine($"{lines}\nNext order in queue:");
+            resturant.ShowNextOrder();
+
+            // Show HandleOrder
+            resturant.HandleOrder();
+
+            // Show Order Count
+            Console.WriteLine();
+            resturant.ShowOrderCount();
         }
     }
 }
