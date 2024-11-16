@@ -8,7 +8,7 @@ namespace Generic_collections
 {
     internal class MenuItem
     {
-        // I denna klass använder vi auto-implemented properties
+        // In this class, we use auto-implemented properties.
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
