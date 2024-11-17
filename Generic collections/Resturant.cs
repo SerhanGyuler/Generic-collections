@@ -12,7 +12,7 @@ namespace Generic_collections
         Queue<Order> _orderQueue = new Queue<Order>();
 
         // AddToMenu Method
-        public void AddtoMenu(MenuItem menuItem)
+        public void AddToMenu(MenuItem menuItem)
         {
             _menu.Add(menuItem);
             Console.WriteLine($"{menuItem.Name} dish added to the menu.");
@@ -37,8 +37,16 @@ namespace Generic_collections
         // HandleOrder Method
         public void HandleOrder()
         {
-            var handledOrder = _orderQueue.Dequeue();
-            Console.WriteLine($"Order {handledOrder._orderId} handled for table {handledOrder._tableNumber}");
+            if ( _orderQueue.Count > 0)
+            {
+                var handledOrder = _orderQueue.Dequeue();
+                Console.WriteLine($"Order {handledOrder._orderId} handled for table {handledOrder._tableNumber}");
+            }
+            else
+            {
+                Console.WriteLine("No orders to handle");
+            }
+ 
         }
 
         public void ShowOrders()
@@ -51,8 +59,18 @@ namespace Generic_collections
 
         public void ShowNextOrder()
         {
-            var nextOrder = _orderQueue.Peek();
-            Console.WriteLine(nextOrder);
+            if (_orderQueue.Count > 0)
+            {
+                Console.WriteLine("Next order in queue:");
+                // Peek returns the first object in Queueu without removeing it
+                var nextOrder = _orderQueue.Peek();
+                Console.WriteLine(nextOrder);
+            }
+            else
+            {
+                Console.WriteLine("No next orders");
+            }
+
         }
 
         public void ShowOrderCount()

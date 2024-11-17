@@ -13,10 +13,10 @@ namespace Generic_collections
             Resturant resturant = new Resturant();
 
             // Dish
-            resturant.AddtoMenu(new MenuItem(1, "Pizza", 99.90m));
-            resturant.AddtoMenu(new MenuItem(2, "Hamburger", 79.90m));
-            resturant.AddtoMenu(new MenuItem(3, "Pasta", 89.90m));
-            resturant.AddtoMenu(new MenuItem(4, "Tacos", 79.90m));
+            resturant.AddToMenu(new MenuItem(1, "Pizza", 99.90m));
+            resturant.AddToMenu(new MenuItem(2, "Hamburger", 79.90m));
+            resturant.AddToMenu(new MenuItem(3, "Pasta", 89.90m));
+            resturant.AddToMenu(new MenuItem(4, "Tacos", 79.90m));
 
             // Create Orders
 
@@ -49,7 +49,7 @@ namespace Generic_collections
             resturant.CreateOrder(order3);
 
             // Show Orders
-            Console.WriteLine($"{lines}");
+            Console.WriteLine($"{lines}\nCurrect orders:");
             resturant.ShowOrders();
 
             // Show Order Count
@@ -57,7 +57,6 @@ namespace Generic_collections
             resturant.ShowOrderCount();
 
             // Show Next Order
-            Console.WriteLine("Next order in queue:");
             resturant.ShowNextOrder();
 
             // Show HandleOrder
@@ -87,7 +86,7 @@ namespace Generic_collections
             resturant.ShowOrderCount();
 
             // Show Next Order
-            Console.WriteLine($"{lines}\nNext order in queue:");
+            Console.WriteLine($"{lines}");
             resturant.ShowNextOrder();
 
             // Show HandleOrder
